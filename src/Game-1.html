@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-1-container">
+        <!-- Back 按钮 -->
+        <div class="back-container">
+            <a href="first-character.html" class="back-button">Back</a>
+        </div>
+
+        <!-- 游戏选择 -->
+        <div class="choice-area">
+            <button class="choice-button" onclick="makeChoice('Rock')">
+                <img src="images/rock.png" alt="Rock" class="choice-image">
+            </button>
+            <button class="choice-button" onclick="makeChoice('Paper')">
+                <img src="images/paper.png" alt="Paper" class="choice-image">
+            </button>
+            <button class="choice-button" onclick="makeChoice('Scissors')">
+                <img src="images/scissor.png" alt="Scissors" class="choice-image">
+            </button>
+        </div>
+
+        <!-- 结果展示 -->
+        <div class="result-area">
+            <div class="result-circle" id="xavier-result">Xavier</div>
+            <h2 id="result-text">Choose Rock, Paper, or Scissors!</h2>
+            <div class="result-circle" id="player-result">You</div>
+        </div>
+    </div>
+
+    <script src="game-1.js"></script>
+</body>
+
+</html>
