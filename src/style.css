@@ -287,7 +287,6 @@ body, html {
 
 /*---------------------------------------- Game-1 ----------------------------------------*/
 
-/* 游戏容器 */
 #game-1-container {
     position: relative;
     width: 100vw;
@@ -298,315 +297,13 @@ body, html {
     background-color: #A12222;
 }
 
-/* Back 按钮 */
-.back-container {
-    position: absolute;
-    top: 4px;
-    right: -55px;
-}
+#game-1-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 
-.back-button {
-    font-size: 30px;
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF;
-    border-radius: 9px;
-    width: 145px;
-    height: 48px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.back-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Xavier 和玩家 */
-.xavier-q {
-    position: absolute;
-    top: 210px;
-    left: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-.me-q {
-    position: absolute;
-    top: 210px;
-    right: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-/* 红色圆圈 */
-.left-circle, .right-circle {
-    position: absolute;
-    top: 330px;
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    border: 10px solid #FF0048;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.left-circle {
-    left: calc(47px + 367px + 47px);
-}
-
-.right-circle {
-    right: calc(47px + 367px + 47px);
-}
-
-/* Begin 按钮 */
-.begin-button {
-    font-size: 36px;
-    color: black;
-    background-color: #FFFEE4;
-    width: 156px;
-    height: 50px;
-    position: absolute;
-    top: 519px;
-    left: calc(50% - 78px);
-    border: none;
-    border-radius: 9px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.begin-button:hover {
-    background-color: #FFEFD4;
-}
-
-/* 石头剪刀布选择区域 */
-.choice-area {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.choice-button {
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #FF0048;
-    color: #FFF;
-    cursor: pointer;
-}
-
-.choice-button:hover {
-    background-color: #FF3366;
-}
-
-/* 结果展示 */
-.result-area {
-    position: absolute;
-    bottom: 100px;
-    text-align: center;
-    color: #FFF;
-}
-
-.hidden {
-    display: none;
-}
-
-/*---------------------------------------- Game-2 ----------------------------------------*/
-#game-2-container {
-    background-color: #718672;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#game-2-container .back-container {
-    position: absolute;
-    top: 4px;
-    right: -55px;
-}
-
-#game-2-container .back-button {
-    font-size: 30px;
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF;
-    border-radius: 9px;
-    width: 145px;
-    height: 48px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-#game-2-container .back-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#game-2-container .rafayel-q {
-    position: absolute;
-    top: 210px;
-    left: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-#game-2-container .me-q {
-    position: absolute;
-    top: 210px;
-    right: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-#game-2-container .left-circle{
-    position: absolute;
-    top: 330px;
-    left: calc(47px + 367px + 47px);
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    border: 10px solid #BCF3C0;
-}
-
-#game-2-container .right-circle {
-    position: absolute;
-    top: 330px;
-    right: calc(47px + 367px + 47px);
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    border: 10px solid #BCF3C0;
-}
-
-
-#game-2-container .begin-button {
-    font-size: 36px;
-    font-family: "Inria Serif", serif;
-    font-weight: 300;
-    font-style: normal;
-    color: black;
-    background-color: #FFFEE4;
-    width: 156px;
-    height: 50px;
-    position: absolute;
-    top: 519px;
-    left: 670px;
-    right: 346px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-/*---------------------------------------- Game-3 ----------------------------------------*/
-#game-3-container {
-    background-color: #C38835;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#game-3-container .back-container {
-    position: absolute;
-    top: 4px;
-    right: -55px;
-}
-
-#game-3-container .back-button {
-    font-size: 30px;
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF;
-    border-radius: 9px;
-    width: 145px;
-    height: 48px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-#game-3-container .back-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#game-3-container .erik-q {
-    position: absolute;
-    top: 210px;
-    left: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-#game-3-container .me-q {
-    position: absolute;
-    top: 210px;
-    right: 47px;
-    width: 367px;
-    height: 391px;
-}
-
-#game-3-container .left-circle{
-    position: absolute;
-    top: 330px;
-    left: calc(47px + 367px + 47px);
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    border: 10px solid #F2DAA4;
-}
-
-#game-3-container .right-circle {
-    position: absolute;
-    top: 330px;
-    right: calc(47px + 367px + 47px);
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    border: 10px solid #F2DAA4;
-}
-
-
-#game-3-container .begin-button {
-    font-size: 36px;
-    font-family: "Inria Serif", serif;
-    font-weight: 300;
-    font-style: normal;
-    color: black;
-    background-color: #FFFEE4;
-    width: 156px;
-    height: 50px;
-    position: absolute;
-    top: 519px;
-    left: 670px;
-    right: 346px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-/*---------------------------------------- game-1 ----------------------------------------*/
 #game-1-container body{
     display: flex;
     justify-content: center;
@@ -615,14 +312,10 @@ body, html {
     background-color: #A12222;
 }
 #game-1-container .container{
-    background: #A12222;
+    background: #CC5F5F;
     padding: 2rem 7rem;
     border-radius: 14px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
-}
-
-#game-1-container .result-images img{
-    width: 100px;
 }
 
 #game-1-container .result-images{
@@ -630,11 +323,40 @@ body, html {
     column-gap: 7rem;
 }
 
-#game-1-container .user-result{
+#game-1-container .container.start .xavier-result{
+    transform-origin: left;
+    animation: xavierShake 0.7s ease infinite;
+}
+  
+
+@keyframes xavierShake {
+    50% {
+      transform: rotate(10deg);
+    }
+}
+
+#game-1-container .container.start .user-result{
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+      transform: rotate(-10deg);
+    }
+}
+  
+  
+#game-1-container .result-images img{
+    width: 100px;
+}
+
+
+#game-1-container .user-result img{
     transform: rotate(-90deg);
 }
 
-#game-1-container .xavier-result{
+#game-1-container .xavier-result img{
     transform: rotate(90deg) rotateY(180deg);
 }
 
@@ -716,6 +438,317 @@ body, html {
 }
 
 #game-1-container .me-q {
+    position: absolute;
+    top: 210px;
+    right: 47px;
+    width: 367px;
+    height: 391px;
+}
+
+
+/*---------------------------------------- game-2 ----------------------------------------*/
+
+
+#game-2-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #739175;
+}
+
+#game-2-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-2-container body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #739175;
+}
+#game-2-container .container {
+    background: #B0D7B3;
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-2-container .result-images {
+    display: flex;
+    column-gap: 7rem;
+}
+
+#game-2-container .container.start .rafayel-result {
+    transform-origin: left;
+    animation: rafayelShake 0.7s ease infinite;
+}
+
+@keyframes rafayelShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+#game-2-container .container.start .user-result {
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+#game-2-container .result-images img {
+    width: 100px;
+}
+
+#game-2-container .user-result img {
+    transform: rotate(-90deg);
+}
+
+#game-2-container .rafayel-result img {
+    transform: rotate(90deg) rotateY(180deg);
+}
+
+#game-2-container .result {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 1.5rem;
+}
+
+#game-2-container .option_image img {
+    width: 50px;
+    pointer-events: none;
+}
+
+#game-2-container .option_images {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+#game-2-container .container.start .option_images {
+    pointer-events: none;
+}
+
+#game-2-container .option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+#game-2-container .option_image:hover {
+    opacity: 1;
+}
+
+#game-2-container .option_image.active {
+    opacity: 1;
+}
+
+#game-2-container .option_image p {
+    color: #000000;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+/* Back 按钮 */
+#game-2-container .back-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#game-2-container .back-button {
+    font-size: 18px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#game-2-container .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#game-2-container .rafayel-q {
+    position: absolute;
+    top: 210px;
+    left: 47px;
+    width: 367px;
+    height: 391px;
+}
+
+#game-2-container .me-q {
+    position: absolute;
+    top: 210px;
+    right: 47px;
+    width: 367px;
+    height: 391px;
+}
+
+/*---------------------------------------- game-3 ----------------------------------------*/
+
+#game-3-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C38835;
+}
+
+#game-3-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-3-container body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #C38835;
+}
+
+#game-3-container .container {
+    background: #F2DAA4;
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-3-container .result-images {
+    display: flex;
+    column-gap: 7rem;
+}
+
+#game-3-container .container.start .erik-result {
+    transform-origin: left;
+    animation: erikShake 0.7s ease infinite;
+}
+
+@keyframes erikShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+#game-3-container .container.start .user-result {
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+#game-3-container .result-images img {
+    width: 100px;
+}
+
+#game-3-container .user-result img {
+    transform: rotate(-90deg);
+}
+
+#game-3-container .erik-result img {
+    transform: rotate(90deg) rotateY(180deg);
+}
+
+#game-3-container .result {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 1.5rem;
+}
+
+#game-3-container .option_image img {
+    width: 50px;
+    pointer-events: none;
+}
+
+#game-3-container .option_images {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+#game-3-container .container.start .option_images {
+    pointer-events: none;
+}
+
+#game-3-container .option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+#game-3-container .option_image:hover {
+    opacity: 1;
+}
+
+#game-3-container .option_image.active {
+    opacity: 1;
+}
+
+#game-3-container .option_image p {
+    color: #000000;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+
+/* Back 按钮 */
+#game-3-container .back-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#game-3-container .back-button {
+    font-size: 18px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#game-3-container .back-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#game-3-container .erik-q {
+    position: absolute;
+    top: 210px;
+    left: 47px;
+    width: 367px;
+    height: 391px;
+}
+
+#game-3-container .me-q {
     position: absolute;
     top: 210px;
     right: 47px;
