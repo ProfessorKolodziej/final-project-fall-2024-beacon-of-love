@@ -1,35 +1,42 @@
-// 获取页面元素
-const resultText = document.getElementById("result-text");
-const playerResult = document.getElementById("player-result");
-const xavierResult = document.getElementById("xavier-result");
+const gameContainer = document.querySelector("#game-1-container .container"),
+userResult = document.querySelector("#game-1-container .user-result img"),
+xavierResult = document.querySelector("#game-1-container .xavier-result img"),
+result = document.querySelector("#game-1-container .result"),
+optionImages = document.querySelectorAll("#game-1-container .option_image");
 
-const choices = ["Rock", "Paper", "Scissors"];
+console.log(gameContainer, userResult, xavierResult, result, optionImages)
 
-// 玩家选择
-function makeChoice(playerChoice) {
-    // Xavier 随机选择
-    const xavierChoice = choices[Math.floor(Math.random() * choices.length)];
 
-    // 更新选择结果到页面
-    playerResult.textContent = playerChoice;
-    xavierResult.textContent = xavierChoice;
+optionImages.forEach((image,index)=> {
+    image.addEventListener("click",(e) => {
+        image.classList.add("active");
 
-    // 计算结果并显示
-    const result = determineWinner(playerChoice, xavierChoice);
-    resultText.textContent = result;
-}
+        optionImages.forEach((image2,index2) => {
+            index !== index2 && image2.classList.remove("active");
 
-// 判断胜负
-function determineWinner(playerChoice, xavierChoice) {
-    if (playerChoice === xavierChoice) {
-        return "It's a Tie!";
-    } else if (
-        (playerChoice === "Rock" && xavierChoice === "Scissors") ||
-        (playerChoice === "Paper" && xavierChoice === "Rock") ||
-        (playerChoice === "Scissors" && xavierChoice === "Paper")
-    ) {
-        return "You Win!";
-    } else {
-        return "Xavier Wins!";
-    }
-}
+        })
+        let imageSrc = e.target.querySelector('img').src;
+        userResult.src = imageSrc;
+
+        let randomNumber = Math.floor(Math.random() * 3);
+        let xavierImages = ["images/rock.png", "images/paper.png", "images/scissor.png"];
+        xavierResult.src = xavierImages[randomNumber];
+        let xavierValue = ['R','P', 'S'][randomNumber];
+        let userValue = ["R","P", "S"][index];
+
+        let outcomes = {
+            RR: "Draw",
+            PR: "Xavier",
+            SR: "User",
+            PP: "Draw",
+            RP: "User",
+            SP: "Xavier",
+            SS: "Draw",
+            RS: "Xavier",
+            PS: "User"
+        }
+
+        let outComeValue = outcomes[userValue + xavierValue]
+        result.textContent = userValue === xavierValue ? "Match Draw" : `${outComeValue} Won!!`;
+    });
+})
