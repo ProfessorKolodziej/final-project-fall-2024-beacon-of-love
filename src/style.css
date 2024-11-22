@@ -601,6 +601,24 @@ body, html {
     height: 391px;
 }
 
+#dialog-box {
+    position: absolute;
+    top: 500px;
+    left: 15.5%;
+    transform: translateX(-50%);
+    padding: 30px 50px;
+    background: white;
+    color: orange;
+    font-size: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
 /*---------------------------------------- game-3 ----------------------------------------*/
 
 #game-3-container {

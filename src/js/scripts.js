@@ -1,3 +1,4 @@
+ // Game-1-------------------------------------------------------------------------------------
 const gameContainer = document.querySelector("#game-1-container .container"),
 userResult = document.querySelector("#game-1-container .user-result img"),
 xavierResult = document.querySelector("#game-1-container .xavier-result img"),
@@ -56,6 +57,7 @@ optionImages.forEach((image,index) => {
     })
   })
 
+// Game-2-------------------------------------------------------------------------------------
 
 const gameContainer2 = document.querySelector("#game-2-container .container");
 
@@ -90,8 +92,7 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
                   let rafayelValue = ["R", "P", "S"][randomNumber];
   
                   let useValue = ["R", "P", "S"][index];
-  
-                  // create an object with all possible outcomes
+
                   let outcomes = {
                       RR: "Draw",
                       PR: "Rafayel",
@@ -103,8 +104,7 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
                       RS: "Rafayel",
                       PS: "User",
                   };
-  
-                  // look up the outcome value based on user and CPU options
+
                   let outComeValue = outcomes[rafayelValue + useValue];
   
                   result.textContent =
@@ -114,7 +114,7 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
       });
   }
   
-
+ // Game-3-------------------------------------------------------------------------------------
   const gameContainer3 = document.querySelector("#game-3-container .container");
 
   if (gameContainer3) {
@@ -148,8 +148,7 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
                   let erikValue = ["R", "P", "S"][randomNumber];
   
                   let useValue = ["R", "P", "S"][index];
-  
-                  // create an object with all possible outcomes
+     
                   let outcomes = {
                       RR: "Draw",
                       PR: "Erik",
@@ -161,8 +160,7 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
                       RS: "Erik",
                       PS: "User",
                   };
-  
-                  // look up the outcome value based on user and CPU options
+
                   let outComeValue = outcomes[erikValue + useValue];
   
                   result.textContent =
@@ -172,3 +170,36 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
       });
   }
   
+
+// 对话
+const characters = document.querySelectorAll(".character-image");
+const dialogBox = document.getElementById("dialog-box");
+
+characters.forEach((character) => {
+    character.addEventListener("click", () => {
+        const dialog = character.getAttribute("data-dialog");
+        dialogBox.textContent = dialog;
+        dialogBox.classList.remove("hidden");
+        setTimeout(() => {
+            dialogBox.classList.add("hidden");
+        }, 2000);
+    });
+});
+
+characters.forEach((character) => {
+    character.addEventListener("click", () => {
+        const dialog = character.getAttribute("data-dialog");
+        const audioSrc = character.getAttribute("data-audio");
+
+        dialogBox.textContent = dialog;
+        dialogBox.classList.remove("hidden");
+
+        const audio = new Audio(audioSrc);
+        audio.play();
+
+        setTimeout(() => {
+            dialogBox.classList.add("hidden");
+        }, 2000);
+    });
+});
+
