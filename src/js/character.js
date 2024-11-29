@@ -22,27 +22,23 @@ console.log(characterId)
 
 // Create the HTML structure
 document.body.innerHTML = `
-    <audio id="audioPlayer">
-    </audio>
+    <audio id="audioPlayer"></audio>
 
     <div class="background${characterId}-image">
-        <div class="character-center">
-            <img src="images/${characterId}.png" alt="${characterId}" class="character-image" id="${characterId}">
-            <div class="chat-container" id="chat-container"></div>
-        </div>
-        <div class="aside">
-            
-            <a href="choose.html" class="quit-button">Quit</a>
+    </div>
+    <div class="character-center">
+        <img src="images/${characterId}.png" alt="${characterId}" class="character-image" id="${characterId}">
+        <div class="chat-container" id="chat-container"></div>
+    </div>
+    <div class="aside">
+        <a href="choose.html" class="quit-button">Quit</a>
 
-            <div class="favorability-container">
-                <div class="favorability-bar${index}"></div>
-                <div class="current-favorability-bar${index}"></div>
-            </div>
-            <p class="favorability-text">Favorability</p>
-            
-            <a href="game.html?character=${characterId}" class="game-button">Game</a>
-
+        <div class="favorability-container">
+            <div class="favorability-bar${index}"></div>
+            <div class="current-favorability-bar${index}"></div>
         </div>
+        <p class="favorability-text">Favorability</p>
+        <a href="game.html?character=${characterId}" class="game-button">Game</a>
     </div>
 `;
 
@@ -63,11 +59,27 @@ const handleClick = () => {
     characterElement.removeEventListener('click', handleClick);
 
     if (favorabilityHeight < maxFavorabilityHeight) {
-        favorabilityHeight += maxFavorabilityHeight*0.1;
+        favorabilityHeight += maxFavorabilityHeight*1;
         if (favorabilityHeight > maxFavorabilityHeight) {
             favorabilityHeight = maxFavorabilityHeight;
         }
         currentFavorabilityBar.style.height = `${favorabilityHeight}px`;
+    }
+
+    if (favorabilityHeight == maxFavorabilityHeight) {
+        const characterCenter = document.querySelector(`.character-center`);
+        
+        // const heart = document.createElement('div');
+        // heart.textContent = '❤️';
+        const heart = document.createElement('img');
+        heart.src = `images/${characterId}Q.png`;
+        heart.classList.add('heart-animation');
+        
+        characterCenter.appendChild(heart);
+        
+        setTimeout(() => {
+            characterCenter.removeChild(heart);
+        }, 2000);
     }
 
     audio.play();
