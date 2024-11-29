@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <audio id="audioPlayer">
+        <source src="erik.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="background-image"></div>
 
     <div class="quit-container">
@@ -17,7 +22,8 @@
     </div>
 
     <div class="character-center">
-        <img src="images/Xavier.png" alt="Xavier" class="character-image">
+        <img src="images/Xavier.png" alt="Xavier" class="character-image" id="xavier">
+        <div class="chat-container" id="chat-container">
     </div>
 
     <div class="favorability-container">
@@ -30,7 +36,8 @@
     </div>
 
     <div class="bottom-overlay"></div>
-    <script src="script.js"></script>
+
+    <script src="js/chat.js"></script>
 </body>
 
 </html>

@@ -170,36 +170,3 @@ const gameContainer2 = document.querySelector("#game-2-container .container");
       });
   }
   
-
-// 对话
-const characters = document.querySelectorAll(".character-image");
-const dialogBox = document.getElementById("dialog-box");
-
-characters.forEach((character) => {
-    character.addEventListener("click", () => {
-        const dialog = character.getAttribute("data-dialog");
-        dialogBox.textContent = dialog;
-        dialogBox.classList.remove("hidden");
-        setTimeout(() => {
-            dialogBox.classList.add("hidden");
-        }, 2000);
-    });
-});
-
-characters.forEach((character) => {
-    character.addEventListener("click", () => {
-        const dialog = character.getAttribute("data-dialog");
-        const audioSrc = character.getAttribute("data-audio");
-
-        dialogBox.textContent = dialog;
-        dialogBox.classList.remove("hidden");
-
-        const audio = new Audio(audioSrc);
-        audio.play();
-
-        setTimeout(() => {
-            dialogBox.classList.add("hidden");
-        }, 2000);
-    });
-});
-

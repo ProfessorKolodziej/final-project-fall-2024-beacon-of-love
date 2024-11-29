@@ -65,7 +65,8 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidd
+    en;
 }
 .choose-container {
     position: relative;
@@ -144,7 +145,7 @@ body, html {
     position: relative;
 }
 
-.background-image {
+.backgroundxavier-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -154,12 +155,6 @@ body, html {
     background-size: cover;
     background-position: center;
     z-index: -1;
-}
-
-.quit-container {
-    position: absolute;
-    top: 31px;
-    right: 97px;
 }
 
 .quit-button {
@@ -174,6 +169,7 @@ body, html {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    z-index: 1;
 }
 
 .quit-button:hover {
@@ -191,35 +187,36 @@ body, html {
     width: auto;
     height: 776px;
     margin-bottom: 0;
+    z-index: 1;
 }
 
 .favorability-container {
-    position: absolute;
-    top: 111px;
-    right: 127px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    position: relative
 }
 
-.favorability-bar {
+.favorability-bar1 {
+    bottom: 0;
+    left: 0;
     width: 84px;
     height: 456px;
     background-color: #FF0048;
     border-radius: 9px;
 }
 
+.current-favorability-bar1 {
+    bottom: 0;
+    left: 0;
+    width: 84px;
+    height: 0px;
+    background-color: black;
+    border-radius: 9px;
+    z-index: 1px;
+}
+
 .favorability-text {
     font-size: 36px;
     color: #FFFFFF;
-    margin-top: 20px;
-    margin-right: -50px;
-}
-
-.game-button-container {
-    position: absolute;
-    bottom: 31px;
-    right: 67px;
+    margin: 0px;
 }
 
 .game-button {
@@ -233,16 +230,22 @@ body, html {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    z-index: 1;
 }
 
-.bottom-overlay {
+.aside {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 304px;
-    height: 832px;
+    min-width: 304px;
+    width: 12%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 /* ----------------------------------------second-character ----------------------------------------*/
@@ -266,7 +269,7 @@ body, html {
 }
 
 /* ----------------------------------------third-character----------------------------------------*/
-.backgroundErik-image {
+.backgrounderik-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -601,23 +604,26 @@ body, html {
     height: 391px;
 }
 
+
+
 #dialog-box {
     position: absolute;
-    top: 500px;
-    left: 15.5%;
+    bottom: 20%;
+    left: 50%;
     transform: translateX(-50%);
-    padding: 30px 50px;
-    background: white;
-    color: orange;
-    font-size: 4rem;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
     z-index: 1000;
 }
 
 .hidden {
     display: none;
 }
+
 
 /*---------------------------------------- game-3 ----------------------------------------*/
 
@@ -772,4 +778,27 @@ body, html {
     right: 47px;
     width: 367px;
     height: 391px;
+}
+
+
+/* ------------------- chat ---------------------*/
+.chat-container {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: none;
+    z-index: 1000;
+}
+
+.chat-text {
+    margin: 0;
+    text-align: center;
 }
