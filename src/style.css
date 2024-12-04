@@ -12,14 +12,10 @@
 h1 {
     font-size: 150px;
     color: #FFFFFF;
-    position: absolute;
-    top: 200px;
-    left: 103px;
-    right: 103px;
+    text-align: center;
     font-family: "Irish Grover", system-ui;
     font-weight: 400;
     font-style: normal; 
-    position: relative;
 }
 body {
     margin: 0;
@@ -45,9 +41,6 @@ body {
     width: 588px;
     height: 119px;
     background-color: transparent;
-    position: absolute;
-    top: 519px;
-    left: 320px;
     cursor: pointer;
     text-align: center;
     line-height: 119px;
@@ -62,8 +55,12 @@ body {
 }
 
 .choose-container, .content-container {
-    width: 1280px;
-    height: 832px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*----------choose your character----------------------------------------*/
