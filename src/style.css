@@ -2,6 +2,9 @@
 .Touch{
     font-size:35px;
     color:white;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     font-family: "Irish Grover", serif;
     font-weight: 400;
     font-style: normal;
@@ -218,7 +221,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FF0048;
+    background-color: #bc0236;
     border-radius: 9px;
 }
 
@@ -228,7 +231,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 0; 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #FF0048;
     border-radius: 9px;
     z-index: 1;
     transition: height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -274,7 +277,7 @@ body, html {
     justify-content: space-around;
 }
 
-/*@keyframes heartAppear {
+@keyframes heartAppear {
     0% { 
         opacity: 0; 
         transform: translate(-50%, -50%) scale(0);
@@ -300,7 +303,7 @@ body, html {
     width: 200px;
     height: 200px;
 }
-*/
+
 /* ----------------------------------------second-character ----------------------------------------*/
 .backgroundrafayel-image {
     position: absolute;
@@ -317,7 +320,7 @@ body, html {
 .favorability-bar2 {
     width: 84px;
     height: 456px;
-    background-color: #C2D2DC;
+    background-color: #8a959c;
     border-radius: 9px;
 }
 
@@ -327,7 +330,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #C2D2DC;
     border-radius: 9px;
     z-index: 1;
     transition: height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -349,7 +352,7 @@ body, html {
 .favorability-bar3 {
     width: 84px;
     height: 456px;
-    background-color: #FDFF7E;
+    background-color: #afb056;
     border-radius: 9px;
 }
 
@@ -359,7 +362,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 0; 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #FDFF7E;
     border-radius: 9px;
     z-index: 1;
     transition: height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);

@@ -54,6 +54,8 @@ console.log(currentFavorabilityBar);
 const characterElement = document.getElementById(characterId);
 const chatContainer = document.getElementById('chat-container');
 
+let full = false;
+
 const handleClick = () => {
     const audioList = data[characterId];
     const randomAudioData = audioList[Math.floor(Math.random() * audioList.length)];
@@ -69,21 +71,22 @@ const handleClick = () => {
         currentFavorabilityBar.style.height = `${favorabilityHeight}px`;
     }
 
-   // if (favorabilityHeight == maxFavorabilityHeight) {
-       // const characterCenter = document.querySelector(`.character-center`);
+   if (favorabilityHeight == maxFavorabilityHeight && !full) {
+        full = true;
+       const characterCenter = document.querySelector(`.character-center`);
         
         // const heart = document.createElement('div');
         // heart.textContent = '❤️';
-        //const heart = document.createElement('img');
-       // heart.src = `images/heart.jpg`;
-       // heart.classList.add('heart-animation');
-        
-       // characterCenter.appendChild(heart);
-        
-       // setTimeout(() => {
-           // characterCenter.removeChild(heart);
-       // }, 2000);
-   // }
+        const heart = document.createElement('img');
+        heart.src = `images/${characterId}Q.png`;
+        heart.classList.add('heart-animation');
+            
+        characterCenter.appendChild(heart);
+            
+        setTimeout(() => {
+            characterCenter.removeChild(heart);
+       }, 2000);
+   }
 
     audio.play();
 
